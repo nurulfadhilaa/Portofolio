@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: #374151;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<header class="py-4 fixed top-0 w-full z-50">
+    <div class="container mx-auto px-6">
+    <div class="flex justify-between items-center">
+      <button id="burger-btn" class="text-white text-2xl md:hidden focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="hidden md:flex space-x-4">
+        <a class="hover:underline" href="index.html">ABOUT</a>
+        <a class="hover:underline" href="pendidikan.html">PENDIDIKAN</a>
+        <a class="font-bold hover:underline" href="skills.html">SKILLS</a>
+        <a class="hover:underline" href="project.html">PROJECT</a>
+        <a class="hover:underline" href="contact.html">CONTACT</a>
+      </nav>
+      <span class="text-lg hidden md:block text-white font-semibold">Nurul Fadhila, S.T</span>
+    </div>
+    <div id="mobile-menu" class="hidden mt-4 md:hidden flex flex-col space-y-2">
+      <a class="hover:underline" href="index.html">ABOUT</a>
+      <a class="hover:underline" href="pendidikan.html">PENDIDIKAN</a>
+      <a class="hover:underline" href="skills.html">SKILLS</a>
+      <a class="hover:underline" href="project.html">PROJECT</a>
+    <a class="hover:underline" href="contact.html">CONTACT</a>
+    </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerBtn = document.getElementById('burger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            burgerBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto mt-24 px-6 pb-20">
+  <h2 class="text-3xl font-bold text-gray-800 text-center mb-3">
+    Skills
+  </h2>
+
+  <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+    Keahlian yang saya miliki berdasarkan pengalaman akademik, magang, dan pengembangan proyek.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+      <div class="flex items-center justify-center mb-4 text-green-500 text-3xl">
+        <i class="fas fa-code"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-4 text-center">Programming</h3>
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ HTML5, CSS3, JavaScript</li>
+        <li>✔ Tailwind CSS</li>
+        <li>✔ PHP</li>
+        <li>✔ ASP.NET Core 8</li>
+        <li>✔ C#</li>
+        <li>✔ MVC Architecture</li>
+        <li>✔ Logika Fuzzy (Tsukamoto)</li>
+        <li>✔ Real-time Monitoring System</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+      <div class="flex items-center justify-center mb-4 text-purple-500 text-3xl">
+        <i class="fas fa-database"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-4 text-center">
+        Database, Tools & Productivity
+      </h3>
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ MySQL & SQL Server</li>
+        <li>✔ XAMPP & phpMyAdmin</li>
+        <li>✔ Figma</li>
+        <li>✔ Canva</li>
+        <li>✔ GitHub</li>
+        <li>✔ Visual Studio Code</li>
+        <li>✔ Microsoft Office</li>
+        <li>✔ Google Workspace</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+    <div class="flex items-center justify-center mb-4 text-pink-500 text-3xl">
+        <i class="fas fa-user-check"></i>
+    </div>
+    <h3 class="text-xl font-semibold mb-4 text-center">Soft Skills</h3>
+    <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ Teamwork</li>
+        <li>✔ Communication</li>
+        <li>✔ Time Management</li>
+        <li>✔ Discipline</li>
+        <li>✔ Problem Solving</li>
+        <li>✔ Detail Oriented</li>
+        <li>✔ Flexibility</li>
+        <li>✔ Work Ethics</li>
+    </ul>
+    </div>
+</div>
+</section>
+
+</body>
+</html>

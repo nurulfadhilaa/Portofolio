@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: #374151;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="py-4 fixed top-0 w-full z-50">
+  <div class="container mx-auto px-6">
+    <div class="flex justify-between items-center">
+      <button id="burger-btn" class="text-white text-2xl md:hidden focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="hidden md:flex space-x-4">
+        <a class="hover:underline text-white" href="index.html">ABOUT</a>
+        <a class="font-bold hover:underline text-white" href="pendidikan.html">PENDIDIKAN</a>
+        <a class="hover:underline text-white" href="skills.html">SKILLS</a>
+        <a class="hover:underline text-white" href="project.html">PROJECT</a>
+        <a class="hover:underline text-white" href="contact.html">CONTACT</a>
+      </nav>
+      <span class="text-lg hidden md:block text-white font-semibold">Nurul Fadhila, S.T</span>
+    </div>
+    <div id="mobile-menu" class="hidden mt-4 md:hidden flex flex-col space-y-2">
+      <a class="hover:underline text-white" href="index.html">ABOUT</a>
+      <a class="hover:underline text-white" href="pendidikan.html">PENDIDIKAN</a>
+      <a class="hover:underline text-white" href="skills.html">SKILLS</a>
+      <a class="hover:underline text-white" href="project.html">PROJECT</a>
+      <a class="hover:underline text-white" href="contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        burgerBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+  </script>
+</header>
+
+<section class="max-w-5xl mx-auto mt-24 px-6 pb-20">
+    <h1 class="text-3xl font-bold text-gray-800 text-center">Pendidikan</h1>
+
+    <hr class="my-6 border-gray-300">
+
+    <div class="relative border-l-4 border-gray-300 pl-8 space-y-8">
+        <div class="relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+        <span class="absolute -left-14 top-6 bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+            <i class="fas fa-graduation-cap"></i>
+        </span>
+        <h2 class="text-xl font-semibold text-gray-900">Universitas Islam Riau</h2>
+        <p class="text-gray-600 mt-1">S1 Teknik Informatika | IPK 3,82</p>
+        <p class="text-sm text-gray-500 mt-2 italic">2021 – 2025</p>
+    </div>
+
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <span class="absolute -left-14 top-6 bg-green-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-school"></i>
+      </span>
+      <h2 class="text-xl font-semibold text-gray-800">SMAN 1 Dumai</h2>
+      <p class="text-gray-600">IPA</p>
+      <p class="text-sm text-gray-500 mt-2 italic">2018 – 2021</p>
+    </div>
+
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <span class="absolute -left-14 top-6 bg-yellow-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-book"></i>
+      </span>
+      <h2 class="text-xl font-semibold text-gray-800">SMPN 2 Dumai</h2>
+      <p class="text-sm text-gray-500 mt-2 italic">2015 – 2018</p>
+    </div>
+
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <span class="absolute -left-14 top-6 bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-pencil-alt"></i>
+      </span>
+      <h2 class="text-xl font-semibold text-gray-800">SDN 004 Bukit Datuk Lama Kota Dumai</h2>
+      <p class="text-sm text-gray-500 mt-2 italic">2009 – 2015</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
