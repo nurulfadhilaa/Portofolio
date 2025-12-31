@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: #374151;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<header class="py-4">
+  <div class="container mx-auto px-6">
+    <div class="flex justify-between items-center">
+      <button id="burger-btn" class="text-white text-2xl md:hidden focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="hidden md:flex space-x-4">
+        <a class="font-bold hover:underline" href="index.html">ABOUT</a>
+        <a class="hover:underline" href="pendidikan.html">PENDIDIKAN</a>
+        <a class="hover:underline" href="skills.html">SKILLS</a>
+        <a class="hover:underline" href="project.html">PROJECT</a>
+        <a class="hover:underline" href="contact.html">CONTACT</a>
+      </nav>
+      <span class="text-lg hidden md:block text-white font-semibold">Nurul Fadhila, S.T</span>
+    </div>
+    <div id="mobile-menu" class="hidden mt-4 md:hidden flex flex-col space-y-2">
+      <a class="hover:underline" href="index.html">ABOUT</a>
+      <a class="hover:underline" href="pendidikan.html">PENDIDIKAN</a>
+      <a class="hover:underline" href="skills.html">SKILLS</a>
+      <a class="hover:underline" href="project.html">PROJECT</a>
+      <a class="hover:underline" href="contact.html">CONTACT</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerBtn = document.getElementById('burger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            burgerBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+  </div>
+</header>
+
+<section id="about" class="max-w-6xl mx-auto mt-8 pt-6 px-6">
+    <div class="flex flex-col md:flex-row items-start gap-6 md:gap-14">
+    <div class="bg-white p-4 rounded-lg shadow mt-11">
+      <img 
+        src="Assets/formal.jpg"
+        alt="Foto Profil"
+        class="w-[200px] h-[250px] object-cover rounded-md"
+      >
+    </div>
+
+    <div class="flex-1">
+    <h1 class="text-2xl font-bold text-gray-800 mb-1">ABOUT ME</h1>
+
+      <hr class="my-3 border-gray-300">
+
+      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
+        Halo! <br> Saya Nurul Fadhila lulusan Teknik Informatika dari Universitas Islam Riau 
+        dengan IPK 3,82. Saya berhasil menyelesaikan studi tepat waktu pada tahun 2025, dengan judul
+        tugas akhir saya adalah <i>"Perancangan Prototype Sistem Cerdas Budidaya Itik Ratu Berbasis Internet 
+        of Things Menggunakan Logika Fuzzy Tsukamoto"</i>.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
+        Saya berminat dalam frontend development, administrasi sistem, dan UI/UX Design. Saya 
+        memiliki pengalaman magang sebagai Web Developer di PT Kilang Pertamina Internasional Unit 
+        Dumai. Saya mampu bekerja secara tim maupun individu, teliti dan detail dalam menyelesaikan 
+        pekerjaan, disiplin terhadap waktu dan tanggung jawab.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
+        Selain itu saya juga memiliki hobi berolahraga terutama basket, badminton, dan lari. Lalu saya juga
+        suka mendengarkan musik serta menonton film.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
