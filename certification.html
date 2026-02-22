@@ -21,17 +21,17 @@
   </style>
 </head>
 <body>
-<header class="py-4">
-  <div class="container mx-auto px-6">
+<header class="py-4 fixed top-0 w-full z-50">
+    <div class="container mx-auto px-6">
     <div class="flex justify-between items-center">
       <button id="burger-btn" class="text-white text-2xl md:hidden focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
       <nav class="hidden md:flex space-x-4">
-        <a class="font-bold hover:underline" href="index.html">ABOUT</a>
+        <a class="hover:underline" href="index.html">ABOUT</a>
         <a class="hover:underline" href="pendidikan.html">EDUCATION</a>
         <a class="hover:underline" href="skills.html">SKILLS</a>
-        <a class="hover:underline" href="certification.html">CERTIFICATION</a>
+        <a class="font-bold hover:underline" href="certification.html">CERTIFICATION</a>
         <a class="hover:underline" href="project.html">PROJECT</a>
         <a class="hover:underline" href="contact.html">CONTACT</a>
       </nav>
@@ -45,8 +45,7 @@
       <a class="hover:underline" href="project.html">PROJECT</a>
       <a class="hover:underline" href="contact.html">CONTACT</a>
     </div>
-
-    <script>
+        <script>
         document.addEventListener('DOMContentLoaded', function () {
             const burgerBtn = document.getElementById('burger-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -57,43 +56,6 @@
     </script>
   </div>
 </header>
-
-<section id="about" class="max-w-6xl mx-auto mt-8 pt-6 px-6">
-    <div class="flex flex-col md:flex-row items-start gap-6 md:gap-14">
-    <div class="bg-white p-4 rounded-lg shadow mt-11">
-      <img 
-        src="Assets/formal.jpg"
-        alt="Foto Profil"
-        class="w-[200px] h-[250px] object-cover rounded-md"
-      >
-    </div>
-
-    <div class="flex-1">
-    <h1 class="text-2xl font-bold text-gray-800 mb-1">ABOUT ME</h1>
-
-      <hr class="my-3 border-gray-300">
-
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Halo! <br> Saya Nurul Fadhila lulusan Teknik Informatika dari Universitas Islam Riau 
-        dengan IPK 3,82. Saya berhasil menyelesaikan studi tepat waktu pada tahun 2025, dengan judul
-        tugas akhir saya adalah <i>"Perancangan Prototype Sistem Cerdas Budidaya Itik Ratu Berbasis Internet 
-        of Things Menggunakan Logika Fuzzy Tsukamoto"</i>.
-      </p>
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Saya berminat dalam frontend development, administrasi sistem, dan UI/UX Design. Saya 
-        memiliki pengalaman magang sebagai Web Developer di PT Kilang Pertamina Internasional Unit 
-        Dumai. Saya mampu bekerja secara tim maupun individu, teliti dan detail dalam menyelesaikan 
-        pekerjaan, disiplin terhadap waktu dan tanggung jawab.
-      </p>
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Selain itu saya juga memiliki hobi berolahraga terutama basket, badminton, dan lari. Lalu saya juga
-        suka mendengarkan musik serta menonton film.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 
 
 </body>
