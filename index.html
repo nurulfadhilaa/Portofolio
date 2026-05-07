@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio</title>
+  <title>Portofolio Nurul Fadhila</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #f3f4f6;
       font-family: 'Poppins', sans-serif;
@@ -20,47 +26,54 @@
     }
   </style>
 </head>
+
 <body>
-<header class="py-4">
+
+<!-- HEADER -->
+<header class="py-4 fixed top-0 w-full z-50 shadow-md">
   <div class="container mx-auto px-6">
+
     <div class="flex justify-between items-center">
+
+      <!-- Burger -->
       <button id="burger-btn" class="text-white text-2xl md:hidden focus:outline-none">
         <i class="fas fa-bars"></i>
       </button>
+
       <nav class="hidden md:flex space-x-4">
-        <a class="font-bold hover:underline" href="index.html">ABOUT</a>
-        <a class="hover:underline" href="pendidikan.html">EDUCATION</a>
-        <a class="hover:underline" href="skills.html">SKILLS</a>
-        <a class="hover:underline" href="certification.html">CERTIFICATION</a>
-        <a class="hover:underline" href="project.html">PROJECT</a>
-        <a class="hover:underline" href="contact.html">CONTACT</a>
+        <a class="nav-link font-bold text-white" href="#about">ABOUT</a>
+        <a class="nav-link text-white" href="#education">EDUCATION</a>
+        <a class="nav-link text-white" href="#skills">SKILLS</a>
+        <a class="nav-link text-white" href="#certification">CERTIFICATION</a>
+        <a class="nav-link text-white" href="#project">PROJECT</a>
+        <a class="nav-link text-white" href="#contact">CONTACT</a>
       </nav>
-      <span class="text-lg hidden md:block text-white font-semibold">Nurul Fadhila, S.T</span>
-    </div>
-    <div id="mobile-menu" class="hidden mt-4 md:hidden flex flex-col space-y-2">
-      <a class="hover:underline" href="index.html">ABOUT</a>
-      <a class="hover:underline" href="pendidikan.html">EDUCATION</a>
-      <a class="hover:underline" href="skills.html">SKILLS</a>
-      <a class="hover:underline" href="certification.html">CERTIFICATION</a>
-      <a class="hover:underline" href="project.html">PROJECT</a>
-      <a class="hover:underline" href="contact.html">CONTACT</a>
+
+      <span class="text-lg hidden md:block text-white font-semibold">
+        Nurul Fadhila, S.T
+      </span>
+
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const burgerBtn = document.getElementById('burger-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            burgerBtn.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
+    <!--Mobile -->
+    <div id="mobile-menu" class="hidden mt-4 md:hidden flex flex-col space-y-2">
+      <a class="hover:underline text-white" href="#about">ABOUT</a>
+      <a class="hover:underline text-white" href="#education">EDUCATION</a>
+      <a class="hover:underline text-white" href="#skills">SKILLS</a>
+      <a class="hover:underline text-white" href="#certification">CERTIFICATION</a>
+      <a class="hover:underline text-white" href="#project">PROJECT</a>
+      <a class="hover:underline text-white" href="#contact">CONTACT</a>
+    </div>
   </div>
 </header>
 
-<section id="about" class="max-w-6xl mx-auto mt-8 pt-6 px-6">
-    <div class="flex flex-col md:flex-row items-start gap-6 md:gap-14">
-    <div class="bg-white p-4 rounded-lg shadow mt-11">
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto pt-28 px-6">
+  
+  <div class="flex flex-col md:flex-row items-start gap-6 md:gap-14">
+
+    <!-- Foto -->
+    <div class="bg-white p-4 rounded-lg shadow mt-6">
       <img 
         src="Assets/formal.jpg"
         alt="Foto Profil"
@@ -69,32 +82,512 @@
     </div>
 
     <div class="flex-1">
-    <h1 class="text-2xl font-bold text-gray-800 mb-1">ABOUT ME</h1>
 
-      <hr class="my-3 border-gray-300">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">
+        ABOUT ME
+      </h1>
 
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Halo! <br> Saya Nurul Fadhila lulusan Teknik Informatika dari Universitas Islam Riau 
-        dengan IPK 3,82. Saya berhasil menyelesaikan studi tepat waktu pada tahun 2025, dengan judul
-        tugas akhir saya adalah <i>"Perancangan Prototype Sistem Cerdas Budidaya Itik Ratu Berbasis Internet 
-        of Things Menggunakan Logika Fuzzy Tsukamoto"</i>.
+      <hr class="my-4 border-gray-300">
+
+      <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+        Halo! <br>
+        Saya Nurul Fadhila lulusan Teknik Informatika dari Universitas Islam Riau 
+        dengan IPK 3,82. Saya berhasil menyelesaikan studi tepat waktu pada tahun 2025, 
+        dengan judul tugas akhir saya adalah 
+        <i>
+          "Perancangan Prototype Sistem Cerdas Budidaya Itik Ratu Berbasis Internet 
+          of Things Menggunakan Logika Fuzzy Tsukamoto"
+        </i>.
       </p>
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Saya berminat dalam UI/UX Design, frontend development, dan administrasi. Saya 
-        memiliki pengalaman magang sebagai Web Developer di PT Kilang Pertamina Internasional Unit 
-        Dumai. Saya mampu bekerja secara tim maupun individu, detail dalam menyelesaikan 
-        pekerjaan, disiplin terhadap waktu dan tanggung jawab.
+
+      <p class="text-gray-700 leading-relaxed mb-4 text-justify">
+        Saya berminat dalam UI/UX Design, frontend development, dan administrasi. 
+        Saya memiliki pengalaman magang sebagai Web Developer di PT Kilang Pertamina 
+        Internasional Unit Dumai. Saya mampu bekerja secara tim maupun individu, 
+        detail dalam menyelesaikan pekerjaan, disiplin terhadap waktu dan tanggung jawab.
       </p>
-      <p class="text-gray-700 leading-relaxed mb-3 text-justify">
-        Selain itu saya juga memiliki hobi berolahraga terutama basket, badminton, dan lari. Lalu saya juga
-        suka mendengarkan musik serta menonton film.
+
+      <p class="text-gray-700 leading-relaxed text-justify">
+        Selain itu saya juga memiliki hobi berolahraga terutama basket, badminton, dan lari. 
+        Lalu saya juga suka mendengarkan musik serta menonton film.
       </p>
+
     </div>
 
   </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="max-w-5xl mx-auto mt-24 px-6 pb-20 scroll-mt-28">
+
+  <h1 class="text-3xl font-bold text-gray-800 text-center">
+    Pendidikan
+  </h1>
+
+  <hr class="my-6 border-gray-300">
+
+  <div class="relative border-l-4 border-gray-300 pl-8 space-y-8">
+
+    <!-- UIR -->
+    <div class="relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+
+      <span class="absolute -left-14 top-6 bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-graduation-cap"></i>
+      </span>
+
+      <h2 class="text-xl font-semibold text-gray-900">
+        Universitas Islam Riau
+      </h2>
+
+      <p class="text-gray-600 mt-1">
+        S1 Teknik Informatika | IPK 3,82
+      </p>
+
+      <p class="text-sm text-gray-500 mt-2 italic">
+        2021 – 2025
+      </p>
+
+    </div>
+
+    <!-- SMA -->
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+
+      <span class="absolute -left-14 top-6 bg-green-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-school"></i>
+      </span>
+
+      <h2 class="text-xl font-semibold text-gray-800">
+        SMAN 1 Dumai
+      </h2>
+
+      <p class="text-gray-600">
+        IPA
+      </p>
+
+      <p class="text-sm text-gray-500 mt-2 italic">
+        2018 – 2021
+      </p>
+
+    </div>
+
+    <!-- SMP -->
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+
+      <span class="absolute -left-14 top-6 bg-yellow-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-book"></i>
+      </span>
+
+      <h2 class="text-xl font-semibold text-gray-800">
+        SMPN 2 Dumai
+      </h2>
+
+      <p class="text-sm text-gray-500 mt-2 italic">
+        2015 – 2018
+      </p>
+
+    </div>
+
+    <!-- SD -->
+    <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+
+      <span class="absolute -left-14 top-6 bg-red-600 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg">
+        <i class="fas fa-pencil-alt"></i>
+      </span>
+
+      <h2 class="text-xl font-semibold text-gray-800">
+        SDN 004 Bukit Datuk Lama Kota Dumai
+      </h2>
+
+      <p class="text-sm text-gray-500 mt-2 italic">
+        2009 – 2015
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-5xl mx-auto mt-24 px-6 pb-20 scroll-mt-28">
+
+  <h2 class="text-3xl font-bold text-gray-800 text-center mb-3">
+    Skills
+  </h2>
+
+  <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+    Keahlian yang saya miliki berdasarkan pengalaman akademik, magang, dan pengembangan proyek.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Programming -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+
+      <div class="flex items-center justify-center mb-4 text-green-500 text-3xl">
+        <i class="fas fa-code"></i>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-4 text-center">
+        Programming
+      </h3>
+
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ HTML & CSS</li>
+        <li>✔ Tailwind CSS</li>
+        <li>✔ ASP.NET Core 8</li>
+        <li>✔ Logika Fuzzy (Tsukamoto)</li>
+        <li>✔ Real-time Monitoring System</li>
+      </ul>
+
+    </div>
+
+    <!-- Database & Tools -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+
+      <div class="flex items-center justify-center mb-4 text-purple-500 text-3xl">
+        <i class="fas fa-database"></i>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-4 text-center">
+        Database, Tools & Productivity
+      </h3>
+
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ MySQL</li>
+        <li>✔ XAMPP & phpMyAdmin</li>
+        <li>✔ Figma</li>
+        <li>✔ Canva</li>
+        <li>✔ GitHub & Git</li>
+        <li>✔ Visual Studio Code</li>
+        <li>✔ Microsoft Office</li>
+        <li>✔ Google Workspace</li>
+      </ul>
+
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 h-full">
+
+      <div class="flex items-center justify-center mb-4 text-pink-500 text-3xl">
+        <i class="fas fa-user-check"></i>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-4 text-center">
+        Soft Skills
+      </h3>
+
+      <ul class="space-y-2 text-gray-700 text-sm">
+        <li>✔ Teamwork</li>
+        <li>✔ Communication</li>
+        <li>✔ Time Management</li>
+        <li>✔ Discipline</li>
+        <li>✔ Problem Solving</li>
+        <li>✔ Detail Oriented</li>
+        <li>✔ Flexibility</li>
+        <li>✔ Work Ethics</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- Certif -->
+<section id="certification" class="max-w-5xl mx-auto mt-24 px-6 pb-20 scroll-mt-28">
+
+  <h1 class="text-3xl font-bold text-center mb-10 text-gray-700">
+      Certifications
+    </h1>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+          Microsoft Office (Word, Excel, PowerPoint)
+        </h2>
+        <p class="text-gray-600 mb-1">DSAREA</p>
+        <p class="text-gray-500 text-sm mb-4">2026</p>
+        <a href="https://www.dsarea.com/?c=0012%2FDSA%2FMO%2F022026" 
+           target="_blank" 
+           class="inline-block bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition"
+           >View Certificate</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+          Toefl
+        </h2>
+        <p class="text-gray-600 ">Infinity Engslish Learning</p>
+        <p class="text-gray-500 text-sm mb-4">April 2025 - Arpil 2027</p>
+        <a href="https://drive.google.com/file/d/17809XGK_7I7d_m4FtvpFMZ9hfj6Nr4w0/view?usp=sharing" 
+           target="_blank" 
+           class="inline-block bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition"
+           >View Certificate</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition duration-300">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+          Sertifikat Magang
+        </h2>
+        <p class="text-gray-600 mb-1">PT Kilang Pertamina Internasional Unit Dumai</p>
+        <p class="text-gray-500 text-sm mb-4">2024</p>
+        <a href="https://drive.google.com/file/d/1OanZuNOId0x3AI9REs1uX7-f7cRqUnX2/view?usp=sharing" 
+           target="_blank" 
+           class="inline-block bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition"
+           >View Certificate</a>
+      </div>
+
+</section>
+
+<!-- project -->
+<section id="project" class="mt-24 max-w-4xl mx-auto px-6 space-y-8 pb-20 scroll-mt-28">
+
+<h1 class="text-3xl font-bold text-gray-800 text-center mb-6">Project</h1>
+  
+  <hr class="border-gray-300 mb-6">
+
+  <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition duration-300">
+    <div class="flex flex-col md:w-1/3 p-4 space-y-4">
+    <img src="Assets/close.png"
+         alt="IoT 1"
+         class="w-full h-48 md:h-auto object-cover cursor-pointer"
+         onclick="showImage(this.src)">
+
+    <img src="Assets/alatt.jpeg"
+         alt="IoT 2"
+         class="w-full h-48 md:h-auto object-cover cursor-pointer"
+         onclick="showImage(this.src)">
+  </div>
+
+  <div class="p-6 flex-1 flex flex-col">
+    <h3 class="text-lg font-semibold mb-5 text-justify">
+      Perancangan <i>Prototype</i> Sistem Cerdas Budidaya Itik Ratu Berbasis <i>Internet of Things</i> Menggunakan 
+      Logika <i>Fuzzy</i> Tsukamoto
+    </h3>
+
+    <p class="text-gray-600 text-xs mb-5 text-justify">
+      Sistem Cerdas Budidaya Itik Ratu Berbasis Internet of Things (IoT) berfokus pada perancangan sistem 
+      monitoring dan kontrol lingkungan kandang itik secara otomatis. Sistem ini memantau parameter suhu, kelembapan 
+      udara dan tanah, serta pH air minum secara real-time menggunakan sensor yang terintegrasi dengan ESP32/Arduino.
+      <br><br>
+      Pengambilan keputusan otomatis dilakukan menggunakan Logika Fuzzy Tsukamoto untuk mengontrol kipas dan 
+      pompa air, sehingga kondisi lingkungan kandang tetap optimal. Sistem ini dilengkapi dengan website dan 
+      bot Telegram sebagai antarmuka monitoring dan kontrol jarak jauh, serta LCD I2C untuk menampilkan data 
+      langsung di lokasi kandang.
+    </p>
+
+    <span class="text-sm text-gray-500 italic mt-auto">2025</span>
+  </div>
+
+</div>
+
+
+  <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition duration-300">
+    <div class="flex flex-col md:w-1/3 p-4 space-y-4">
+      <img src="Assets/kp.png" 
+           alt="Gambar 1" 
+           class="w-full h-48 md:h-auto object-cover cursor-pointer"
+           onclick="showImage(this.src)">
+      <img src="Assets/kp4.png" 
+           alt="Gambar 2" 
+           class="w-full h-48 md:h-auto object-cover cursor-pointer"
+           onclick="showImage(this.src)">
+    </div>
+
+    <div class="p-6 flex-1 flex flex-col text-justify">
+      <h3 class="text-lg font-semibold mb-5 ">
+        Pembuatan <i>Tools Card Generator</i> Menggunakan .NET Core 8
+        dan SQL Server (Studi Kasus: PT Kilang Pertamina Internasional Unit Dumai)
+      </h3>
+      <p class="text-gray-600 text-xs mb-5 ">
+        Sistem Tools Card Generator dirancang untuk menghasilkan Safety Tag Peralatan dalam format digital yang 
+        dapat dicetak dan diaplikasikan sebagai stiker atau media identifikasi lainnya pada peralatan yang 
+        digunakan di area kilang. Aplikasi ini dikembangkan menggunakan .NET Core 8 dan SQL Server dengan metode 
+        Waterfall.
+      </p>
+      <p class="text-gray-600 text-xs mb-5">
+        Aplikasi ini dilengkapi beberapa fitur utama, antara lain fitur Add, yang memungkinkan user 
+        mengklik langsung pada area tertentu pada gambar untuk menentukan posisi pengisian data (berdasarkan 
+        koordinat X dan Y). Tersedia juga fitur Reset Data untuk menghapus seluruh input, fitur Data 
+        untuk melihat informasi yang telah dimasukkan, serta fitur Upload Image untuk mengunggah 
+        tampilan atau template yang berbeda. Selain itu, terdapat fitur Preview untuk mengunduh Safety 
+        Tag dalam bentuk gambar sebelum dicetak atau digunakan.
+      </p>
+      <span class="text-sm text-gray-500 italic mt-auto">2024</span>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition duration-300">
+
+  <video 
+    controls
+    controlsList="nodownload"
+    oncontextmenu="return false"
+    class="w-full md:w-1/3 h-40 md:h-48 object-contain p-4 rounded-xl">
+    <source src="Assets/vid2.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="p-6 flex-1 flex flex-col text-justify">
+    <h3 class="text-lg font-semibold mb-5">
+      Desain Aplikasi Sistem Akademik (SIKAD) Berbasis Mobile Menggunakan Figma.
+    </h3>
+    <p class="text-gray-600 text-xs mb-5">
+      Merupakan desain aplikasi mobile yang berfungsi untuk memudahkan mahasiswa dalam mengakses informasi akademik 
+      secara digital. Aplikasi ini menyediakan fitur utama seperti informasi perkuliahan, jadwal, dan data akademik 
+      lainnya dalam satu platform yang terstruktur. Desain dibuat sederhana dan intuitif agar mudah digunakan oleh 
+      seluruh pengguna.
+    </p>
+    <span class="text-sm text-gray-500 italic mt-auto">2024</span>
+  </div>
+
+</div>
+
+   <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition duration-300">
+
+  <video 
+    controls
+    controlsList="nodownload"
+    oncontextmenu="return false"
+    class="w-full md:w-1/3 h-40 md:h-48 object-contain p-4 rounded-xl">
+    <source src="Assets/vid1.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="p-6 flex-1 flex flex-col text-justify">
+    <h2 class="text-lg font-semibold mb-5">
+      Desain Aplikasi Donasi (KITA BERKAH) Berbasis Mobile Menggunakan Figma.
+    </h2>
+    <p class="text-gray-600 text-xs mb-5">
+      Merupakan desain aplikasi mobile yang berfungsi sebagai platform donasi digital untuk mempermudah 
+      pengguna dalam menyalurkan bantuan. Aplikasi ini menyediakan informasi program donasi serta proses 
+      donasi yang cepat dan praktis. Desain difokuskan pada kenyamanan, kejelasan informasi, dan peningkatan 
+      kepercayaan pengguna.
+    </p>
+    <span class="text-sm text-gray-500 italic mt-auto">2024</span>
+  </div>
+</div>
+
+
+</main>
+
+<div id="imgModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+  <span id="closeModal" class="absolute top-5 right-7 text-white text-4xl cursor-pointer select-none">&times;</span>
+  <img id="modalImg" src="" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg border-2 border-white">
+</div>
+
+</section>
+
+<section id="contact" class="max-w-5xl mx-auto mt-24 px-6 pb-20 scroll-mt-28">
+
+<h2 class="text-3xl font-bold text-gray-800 text-center mb-3">
+    Contact Me
+  </h2>
+
+  <p class="text-center text-gray-600 max-w-2xl mx-auto">
+    Silakan hubungi saya melalui email atau media sosial untuk kerja sama, 
+    peluang karier, atau diskusi proyek.
+  </p>
+
+<div class="mt-10 grid md:grid-cols-3 gap-6">
+
+    <a href="mailto:nurulfadhilaa28@email.com" target="_blank"
+       class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+      <i class="fas fa-envelope text-blue-500 text-3xl mb-3"></i>
+      <p class="font-semibold">Email</p>
+      <p class="text-gray-600 text-sm">nurulfadhilaa28@email.com</p>
+    </a>
+
+    <a href="https://wa.me/085297600851" target="_blank"
+       class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+      <i class="fab fa-whatsapp text-green-500 text-3xl mb-3"></i>
+      <p class="font-semibold">WhatsApp</p>
+      <p class="text-gray-600 text-sm">085297600851</p>
+    </a>
+
+    <a href="https://instagram.com/nurulfadhilaa28" target="_blank"
+       class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+      <i class="fab fa-instagram text-pink-500 text-3xl mb-3"></i>
+      <p class="font-semibold">Instagram</p>
+      <p class="text-gray-600 text-sm">@nurulfadhilaa28</p>
+    </a>
+</div>
+<div class="mt-6 flex justify-center gap-6 flex-wrap">
+  
+  <a href="https://www.linkedin.com/in/nurulfadhilaa28" target="_blank"
+     class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition
+            w-full max-w-sm">
+    <i class="fab fa-linkedin text-blue-600 text-3xl mb-3"></i>
+    <p class="font-semibold">LinkedIn</p>
+    <p class="text-gray-600 text-sm">linkedin.com/in/nurulfadhilaa28</p>
+  </a>
+
+  <a href="https://github.com/nurulfadhilaa" target="_blank"
+     class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition
+            w-full max-w-sm">
+    <i class="fab fa-github text-gray-800 text-3xl mb-3"></i>
+    <p class="font-semibold">GitHub</p>
+    <p class="text-gray-600 text-sm">github.com/nurulfadhilaa</p>
+  </a>
+
+</div>
+
 </section>
 
 
+
+<!-- SCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const burgerBtn = document.getElementById('burger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    burgerBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+  });
+
+   const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+
+      // hapus bold semua
+      navLinks.forEach(item => {
+        item.classList.remove('font-bold');
+      });
+
+      // tambahkan bold ke yang dipilih
+      this.classList.add('font-bold');
+
+    });
+  });
+
+  function showImage(src) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+
+    modalImg.src = src;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  document.getElementById("closeModal").onclick = function () {
+    const modal = document.getElementById("imgModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  };
+
+  document.getElementById("imgModal").onclick = function (e) {
+    if (e.target.id === "imgModal") {
+      const modal = document.getElementById("imgModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  };
+</script>
 
 </body>
 </html>
