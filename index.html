@@ -110,6 +110,13 @@
 
     </div>
 
+    <div class="mt-6">
+      <a href="Assets/CV Nurul Fadhila.pdf" download
+        class="bg-gray-700 hover:bg-gray-900 text-white px-6 py-3 rounded-lg transition inline-block">
+        Download CV
+      </a>
+    </div>
+
   </div>
 
 </section>
@@ -515,6 +522,14 @@
 
     burgerBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
 
   });
