@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -112,6 +112,14 @@
     </div>
   </div>
 </header>
+
+<button 
+  id="toTopBtn"
+  class="fixed bottom-6 right-6 bg-gray-700 hover:bg-gray-900 
+         text-white w-12 h-12 rounded-full shadow-lg 
+         hidden transition duration-300 z-50">
+  ↑
+</button>
 
 <!--ABOUT-->
 <section id="about" class="max-w-6xl pb-18 mx-auto pt-28 px-6">
@@ -654,21 +662,24 @@ class="max-w-5xl mx-auto mt-16 md:mt-24 px-4 md:px-6 pb-20 scroll-mt-28">
   <div class="mt-10 grid md:grid-cols-3 gap-6">
 
       <a href="mailto:nurulfadhilaa28@email.com" target="_blank"
-        class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+        class="bg-white p-6 rounded-2xl shadow text-center hover:shadow-xl 
+               hover:-translate-y-1 transition duration-300 block">
         <i class="fas fa-envelope text-blue-500 text-3xl mb-3"></i>
         <p class="font-semibold">Email</p>
         <p class="text-gray-600 text-sm">nurulfadhilaa28@email.com</p>
       </a>
 
       <a href="https://wa.me/085297600851" target="_blank"
-        class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+        class="bg-white p-6 rounded-2xl shadow text-center hover:shadow-xl 
+               hover:-translate-y-1 transition duration-300 block">
         <i class="fab fa-whatsapp text-green-500 text-3xl mb-3"></i>
         <p class="font-semibold">WhatsApp</p>
         <p class="text-gray-600 text-sm">085297600851</p>
       </a>
 
       <a href="https://instagram.com/nurulfadhilaa28" target="_blank"
-        class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition block">
+        class="bg-white p-6 rounded-2xl shadow text-center hover:shadow-xl 
+               hover:-translate-y-1 transition duration-300 block">
         <i class="fab fa-instagram text-pink-500 text-3xl mb-3"></i>
         <p class="font-semibold">Instagram</p>
         <p class="text-gray-600 text-sm">@nurulfadhilaa28</p>
@@ -677,16 +688,20 @@ class="max-w-5xl mx-auto mt-16 md:mt-24 px-4 md:px-6 pb-20 scroll-mt-28">
   <div class="mt-6 flex justify-center gap-6 flex-wrap">
     
     <a href="https://www.linkedin.com/in/nurulfadhilaa28" target="_blank"
-      class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition
-              w-full max-w-sm">
+      class="bg-white p-6 rounded-2xl shadow text-center 
+         hover:shadow-xl hover:-translate-y-1 
+         transition duration-300 block
+         w-full md:w-[380px]">
       <i class="fab fa-linkedin text-blue-600 text-3xl mb-3"></i>
       <p class="font-semibold">LinkedIn</p>
       <p class="text-gray-600 text-sm">linkedin.com/in/nurulfadhilaa28</p>
     </a>
 
     <a href="https://github.com/nurulfadhilaa" target="_blank"
-      class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition
-              w-full max-w-sm">
+       class="bg-white p-6 rounded-2xl shadow text-center 
+         hover:shadow-xl hover:-translate-y-1 
+         transition duration-300 block
+         w-full md:w-[380px]">
       <i class="fab fa-github text-gray-800 text-3xl mb-3"></i>
       <p class="font-semibold">GitHub</p>
       <p class="text-gray-600 text-sm">github.com/nurulfadhilaa</p>
@@ -699,6 +714,28 @@ class="max-w-5xl mx-auto mt-16 md:mt-24 px-4 md:px-6 pb-20 scroll-mt-28">
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
+
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+      toTopBtn.classList.remove("hidden");
+    } else {
+      toTopBtn.classList.add("hidden");
+    }
+
+  });
+
+  toTopBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
 
     const burgerBtn = document.getElementById('burger-btn');
