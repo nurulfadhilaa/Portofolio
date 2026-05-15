@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f3f4f6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.active-link{
+  font-weight: bold;
+}
