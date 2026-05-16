@@ -19,6 +19,8 @@ async function loadSections() {
     await (await fetch("sections/contact.html")).text();
 
   initApp();
+
+document.body.classList.remove("opacity-0");
 }
 
 loadSections();
