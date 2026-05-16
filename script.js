@@ -1,4 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+async function loadSections() {
+
+  document.getElementById("about-container").innerHTML =
+    await (await fetch("sections/about.html")).text();
+
+  document.getElementById("education-container").innerHTML =
+    await (await fetch("sections/education.html")).text();
+
+  document.getElementById("skills-container").innerHTML =
+    await (await fetch("sections/skills.html")).text();
+
+  document.getElementById("certification-container").innerHTML =
+    await (await fetch("sections/certification.html")).text();
+
+  document.getElementById("project-container").innerHTML =
+    await (await fetch("sections/project.html")).text();
+
+  document.getElementById("contact-container").innerHTML =
+    await (await fetch("sections/contact.html")).text();
+
+  initApp();
+}
+
+loadSections();
+
+function initApp() {
 
   // TO TOP BUTTON
   const toTopBtn = document.getElementById("toTopBtn");
@@ -26,26 +51,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const burgerBtn = document.getElementById("burger-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  burgerBtn.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
-  });
+  if (burgerBtn && mobileMenu) {
 
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-
-  mobileLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
+    burgerBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
     });
 
-  });
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+
+    mobileLinks.forEach(link => {
+
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+
+    });
+
+  }
 
   // ACTIVE NAVBAR
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach(link => {
 
-    link.addEventListener("click", function(){
+    link.addEventListener("click", function () {
 
       navLinks.forEach(item => {
         item.classList.remove("active-link");
@@ -57,30 +86,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-  // CLOSE MODAL
+  // MODAL
   const closeModal = document.getElementById("closeModal");
   const imgModal = document.getElementById("imgModal");
 
-  closeModal.onclick = function () {
+  if (closeModal && imgModal) {
 
-    imgModal.classList.add("hidden");
-    imgModal.classList.remove("flex");
-
-  };
-
-  imgModal.onclick = function (e) {
-
-    if (e.target.id === "imgModal") {
+    closeModal.onclick = function () {
 
       imgModal.classList.add("hidden");
       imgModal.classList.remove("flex");
 
-    }
+    };
 
-  };
+    imgModal.onclick = function (e) {
 
-});
+      if (e.target.id === "imgModal") {
 
+        imgModal.classList.add("hidden");
+        imgModal.classList.remove("flex");
+
+      }
+
+    };
+
+  }
+
+}
 
 // OPEN MODAL
 function showImage(src) {
@@ -88,9 +120,13 @@ function showImage(src) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
 
-  modalImg.src = src;
+  if (modal && modalImg) {
 
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
+    modalImg.src = src;
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+  }
 
 }
