@@ -71,6 +71,7 @@ function initApp() {
 
   }
 
+  
   // ACTIVE NAVBAR
   const navLinks = document.querySelectorAll(".nav-link");
 
